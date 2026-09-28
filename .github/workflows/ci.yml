@@ -1,0 +1,14 @@
+name: Compila ed esegui
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compila
+        run: gcc -Wall -o eulero eulero.c -lm
+      - name: Esegui
+        run: ./eulero > output.dat
+      - name: Controlla che l'output esista e non sia vuoto
+        run: test -s output.dat
