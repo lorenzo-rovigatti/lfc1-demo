@@ -6,7 +6,7 @@ int main() {
 
 	int i;
 	for(i = 0; i < 10; i++) {
-		fprintf(out, "%d\n", i);
+		fprintf(out, "%d\n", i)
 	}
 
 	fclose(out);
